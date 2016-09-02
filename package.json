@@ -1,0 +1,33 @@
+{
+  "name": "speri-checku",
+  "version": "1.0.0",
+  "description": "A swedish spell checking and suggestion service",
+  "scripts": {
+    "start": "nodemon src/server.js --exec babel-node",
+    "build": "babel src -d dist",
+    "serve": "node dist/server.js",
+    "test": "mocha --compilers js:babel-register"
+  },
+  "pre-commit": [
+    "test"
+  ],
+  "keywords": [
+    "swedish",
+    "spell check",
+    "suggestions"
+  ],
+  "author": "Ian Vidales",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-2": "^6.13.0",
+    "babel-register": "^6.14.0",
+    "mocha": "^3.0.2",
+    "nodemon": "^1.10.2"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "nodehun": "^2.0.11"
+  }
+}
