@@ -1,11 +1,15 @@
 import express from 'express';
+
 import routes from './routes';
+import config from '../src/config';
+
+const port = config.port;
 
 const app = express();
 routes(app);
 
-app.listen(1234, function () {
-  console.log('Speri Shecku listening on port 1234!');
+app.listen(port, ()  => {
+  console.log(`Speri Shecku listening on port ${port}`);
 });
 
 export default app;

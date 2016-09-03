@@ -1,8 +1,9 @@
-import check from './routes/check';
+import verify from './routes/verifyRoute';
+import suggest from './routes/suggestRoute';
 
 const routes = (app) => {
-  app.get('/check/:word', check.isCorrect);
-  app.get('/suggest/:word', check.suggest);
+  app.get('/verify/:text', verify);
+  app.get('/suggest/:text', suggest);
 };
 
 export default routes;
