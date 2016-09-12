@@ -1,11 +1,10 @@
 import http from 'http';
 import assert from 'assert';
 
-import config from '../../src/config';
-import app from '../../src/server.js';
+import config from '../../src/server/config';
 
 const port = config.port;
-const serverUrl = `http://localhost:${port}`;
+const serverUrl = `http://localhost:${port}/api`;
 
 describe('Verify route', () => {
   const correctWord = 'apelsin';
