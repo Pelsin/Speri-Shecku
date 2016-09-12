@@ -1,7 +1,7 @@
 import fs from 'fs';
 import nodehun from 'nodehun';
 
-import config from '../src/config';
+import config from './config';
 const { dictionary: { language, filename } } = config;
 
 const forensic = fs.readFileSync(`./dictionary/${language}/${filename}.aff`);

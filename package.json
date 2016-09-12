@@ -3,14 +3,8 @@
   "version": "1.0.0",
   "description": "A swedish spell checking and suggestion service",
   "scripts": {
-    "start": "nodemon src/server.js --exec babel-node",
-    "build": "babel src -d dist",
-    "serve": "node dist/server.js",
-    "test": "PORT=3335 mocha --recursive --compilers js:babel-register"
+    "start": "pm2 start ./config/pm2.json && pm2 logs"
   },
-  "pre-commit": [
-    "test"
-  ],
   "keywords": [
     "swedish",
     "spell check",
@@ -19,15 +13,20 @@
   "author": "Ian Vidales",
   "license": "ISC",
   "devDependencies": {
-    "babel-cli": "^6.14.0",
+    "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.14.0",
-    "babel-preset-stage-2": "^6.13.0",
+    "babel-preset-react": "^6.11.1",
     "babel-register": "^6.14.0",
+    "material-ui": "^0.15.4",
     "mocha": "^3.0.2",
-    "nodemon": "^1.10.2"
+    "nodehun": "^2.0.11",
+    "pm2": "^1.1.3",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "react-tap-event-plugin": "^1.0.0",
+    "webpack": "^1.13.2"
   },
   "dependencies": {
-    "express": "^4.14.0",
-    "nodehun": "^2.0.11"
+    "express": "^4.14.0"
   }
 }

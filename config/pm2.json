@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "speri-shecku",
+      "script": "init.js",
+      "cwd": "./",
+      "watch" : "src",
+      "env": {
+        "PORT": "3334"
+      }
+    }
+  ]
+}

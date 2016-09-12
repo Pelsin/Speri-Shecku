@@ -5,7 +5,7 @@ Currently only handles one word at the time.
 
 ## Routes
 
-### Verify/:text
+### api/verify/:text
 Returns if the word is found in the dictionary and the sent word
 
 ```
@@ -15,7 +15,7 @@ Returns if the word is found in the dictionary and the sent word
 }
 ```
 
-### suggest/:text
+### api/suggest/:text
 Returns if the word is found in the dictionary suggestion on similar words
 
 ```

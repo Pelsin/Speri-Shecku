@@ -1,7 +1,7 @@
 import express from 'express';
 
 import routes from './routes';
-import config from '../src/config';
+import config from './config';
 
 const port = config.port;
 
